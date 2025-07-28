@@ -19,11 +19,13 @@ public class StudentController {
 
     public StudentController(StudentService service) {
         this.service = service;
+
     }
 
     @GetMapping
     public List<Student> getAllStudents() {
         return service.getAllStudents();
+
     }
 
     @GetMapping("/{id}")
@@ -37,6 +39,7 @@ public class StudentController {
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {
         Student saved = service.saveStudent(student);
         return ResponseEntity.ok(saved);
+
     }
 
     @PutMapping("/{id}")
@@ -46,6 +49,7 @@ public class StudentController {
                     student.setName(studentDetails.getName());
                     student.setEmail(studentDetails.getEmail());
                     Student updated = service.saveStudent(student);
+
                     return ResponseEntity.ok(updated);
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
