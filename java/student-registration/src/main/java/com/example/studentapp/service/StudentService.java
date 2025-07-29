@@ -13,9 +13,12 @@ import java.util.Optional;
 @Service
 public class StudentService {
 
+    /** Repository used for data persistence. */
     private final StudentRepository repository;
 
     public StudentService(StudentRepository repository) {
+        // Constructor injection promotes immutability
+
         this.repository = repository;
     }
 
@@ -23,6 +26,8 @@ public class StudentService {
      * Retrieve all students from the database.
      */
     public List<Student> getAllStudents() {
+        // Retrieve every Student record
+
         return repository.findAll();
     }
 
@@ -30,6 +35,8 @@ public class StudentService {
      * Find a student by id.
      */
     public Optional<Student> getStudentById(Long id) {
+        // Look up a student by its primary key
+
         return repository.findById(id);
     }
 
@@ -37,6 +44,8 @@ public class StudentService {
      * Save a student to the database.
      */
     public Student saveStudent(Student student) {
+        // Persist the student entity
+
         return repository.save(student);
     }
 
@@ -44,6 +53,8 @@ public class StudentService {
      * Delete the provided student.
      */
     public void deleteStudent(Student student) {
+        // Remove the student from the database
+
         repository.delete(student);
     }
 }
