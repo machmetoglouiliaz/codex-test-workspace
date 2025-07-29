@@ -18,6 +18,7 @@ public class StudentService {
 
     public StudentService(StudentRepository repository) {
         // Constructor injection promotes immutability
+
         this.repository = repository;
     }
 
@@ -26,6 +27,7 @@ public class StudentService {
      */
     public List<Student> getAllStudents() {
         // Retrieve every Student record
+
         return repository.findAll();
     }
 
@@ -34,6 +36,7 @@ public class StudentService {
      */
     public Optional<Student> getStudentById(Long id) {
         // Look up a student by its primary key
+
         return repository.findById(id);
     }
 
@@ -42,6 +45,7 @@ public class StudentService {
      */
     public Student saveStudent(Student student) {
         // Persist the student entity
+
         return repository.save(student);
     }
 
@@ -50,6 +54,7 @@ public class StudentService {
      */
     public void deleteStudent(Student student) {
         // Remove the student from the database
+
         repository.delete(student);
     }
 }

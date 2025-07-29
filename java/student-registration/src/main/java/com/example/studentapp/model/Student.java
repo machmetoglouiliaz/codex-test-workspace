@@ -24,6 +24,7 @@ public class Student {
 
     public Student(Long id, String name, String email) {
         // Convenient constructor for manual instantiation
+
         this.id = id;
         this.name = name;
         this.email = email;
@@ -31,31 +32,37 @@ public class Student {
 
     public Long getId() {
         // Unique identifier for the student
+
         return id;
     }
 
     public void setId(Long id) {
         // Setter used by JPA and tests
+
         this.id = id;
     }
 
     public String getName() {
         // Retrieve the full name
+
         return name;
     }
 
     public void setName(String name) {
         // Update the student's name
+
         this.name = name;
     }
 
     public String getEmail() {
         // Access the contact email address
+
         return email;
     }
 
     public void setEmail(String email) {
         // Set the contact email address
+
         this.email = email;
     }
 }

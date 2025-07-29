@@ -39,6 +39,7 @@ public class StudentController {
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         // Fetch a single student or respond with 404
+
         Optional<Student> student = service.getStudentById(id);
         return student.map(ResponseEntity::ok)
                       .orElseGet(() -> ResponseEntity.notFound().build());
@@ -66,6 +67,7 @@ public class StudentController {
                     student.setName(studentDetails.getName());
                     student.setEmail(studentDetails.getEmail());
                     Student updated = service.saveStudent(student);
+
                     return ResponseEntity.ok(updated);
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
@@ -77,6 +79,7 @@ public class StudentController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteStudent(@PathVariable Long id) {
         // Remove a student if present
+
         return service.getStudentById(id)
                 .map(student -> {
                     service.deleteStudent(student);
