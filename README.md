@@ -20,7 +20,7 @@ The goal is to build a flexible playground where various **Codex features and be
 - [ ] Suggest optimizations or improvements
 
 ### 🧪 Testing
-- [ ] Generate unit tests (e.g. with JUnit, Jest, PyTest)
+- [x] Generate unit tests (e.g. with JUnit, Jest, PyTest)
 - [ ] Apply TDD/BDD practices
 - [ ] Create mocks and test data
 - [ ] Achieve edge-case coverage
