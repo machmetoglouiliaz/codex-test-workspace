@@ -11,7 +11,6 @@ public class StudentRegistrationApplication {
 
     public static void main(String[] args) {
         // Bootstrap the Spring Boot application
-
         SpringApplication.run(StudentRegistrationApplication.class, args);
     }
 }
