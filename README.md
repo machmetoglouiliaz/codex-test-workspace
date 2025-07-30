@@ -12,9 +12,9 @@ The goal is to build a flexible playground where various **Codex features and be
 ## 🚀 Features to Test
 
 ### 🔧 General Programming
-- [ ] Generate boilerplate code (e.g. CRUD, CLI tools, UI components)
-- [ ] Refactor existing code for readability or performance
-- [ ] Add inline documentation/comments
+- [x] Generate boilerplate code (e.g. CRUD, CLI tools, UI components)
+- [x] Refactor existing code for readability or performance
+- [x] Add inline documentation/comments
 - [ ] Explain complex code snippets
 - [ ] Translate code between languages (e.g. JS → Python)
 - [ ] Suggest optimizations or improvements
